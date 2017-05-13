@@ -42,7 +42,7 @@ frontend_contracts_dir='./src/contracts'
 
 # start: Ethereum JSON-RPC server
 mnemonic='foo bar baz'
-lxterminal -e testrpc -m $mnemonic
+lxterminal -e testrpc -m "$mnemonic"
 
 # clean and (re)populate: CONTRACTNAME.deployed.json
 rm ${frontend_contracts_dir}/*.deployed.json
