@@ -1,6 +1,6 @@
 {
   "name": "@warren-bank/dapp-frontend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "npm-add-script": "^1.1.0",
     "shelljs": "^0.7.7",

@@ -40,9 +40,11 @@ const init_toolchain = function(directory_path){
     console.log('  - "npm run watch-css" will fail')
     console.log('  - SASS (.scss) will not be transpiled into CSS (.css)')
     console.log('  - "src/App.css" can be modified instead')
+    console.log('')
   }
 
   if (shell.exec("create-react-app .").code !== 0){
+    console.log('')
     console.log('"create-react-app" encountered a problem.')
     console.log('It returned an error code.')
     console.log('Inspect the contents of the new project directory:' + "\n  " + directory_path)
@@ -50,6 +52,7 @@ const init_toolchain = function(directory_path){
   }
 
   if (shell.exec("npm install --save web3").code !== 0){
+    console.log('')
     console.log('"npm" encountered a problem installing the dependency: "web3".')
     console.log('It returned an error code.')
     console.log('Inspect the contents of the new project directory:' + "\n  " + directory_path)

@@ -27,31 +27,45 @@ npm install -g node-sass
 #### Example:
 
 ```bash
-mkdir ~/react_frontend_dapp
-cd ~/react_frontend_dapp
-
-dapp frontend react
-
-# notes:
-#   - in example project, compiled contracts are located in frontend dapp workspace.
-#   - in real workflow, compiled contracts are located in `@dapphub/dapp` project workspace (./out)
-#   - contract deployment requires: *.abi, *.bin
-#   - frontend (web3.js) requires: *.abi.json, *.deployed.json
-compiled_contracts_dir='./src/contracts/compiler-artifacts'
-frontend_contracts_dir='./src/contracts'
-
 # start: Ethereum JSON-RPC server
 mnemonic='foo bar baz'
 lxterminal -e testrpc -m "$mnemonic"
 
-# clean and (re)populate: CONTRACTNAME.deployed.json
-rm ${frontend_contracts_dir}/*.deployed.json
-dapp deploy -i $compiled_contracts_dir -O $frontend_contracts_dir'/{{contract}}.deployed.json'
+# create a new/empty frontend project directory
+mkdir ~/react_frontend_dapp
+cd ~/react_frontend_dapp
 
-# clean and (re)populate: CONTRACTNAME.abi.json
+# initialize a new frontend (boilerplate) project having a `react` toolchain
+dapp frontend react
+
+# notes:
+#   - in the example projects, compiled contracts are located within the frontend dapp workspace.
+#   - in a more realistic workflow, compiled contracts would be located in `@dapphub/dapp` project workspace (./out) separate from the frontend
+#   - contract deployment requires: *.abi, *.bin
+#   - frontend (web3.js) requires: *.abi.json, *.deployed.json
+
+backend_contracts_dir='./src/contracts/dapp-backend'
+compiled_contracts_dir="${backend_contracts_dir}/out"
+
+frontend_contracts_dir='./src/contracts'
+
+# optional:
+# recompile all Solidity contracts
+rm ${compiled_contracts_dir}/*
+(cd $backend_contracts_dir; dapp build)
+
+# optional, required if Solidity contracts were recompiled:
+# delete all frontend ABI data and save a fresh copy: *.abi.json
 rm ${frontend_contracts_dir}/*.abi.json
 cp ${compiled_contracts_dir}/*.abi ${frontend_contracts_dir}/
 rename 's/\.abi$/.abi.json/' ${frontend_contracts_dir}/*.abi
+
+# optional:
+# delete metadata for all previous contract deployments
+rm ${frontend_contracts_dir}/*.deployed.json
+# optional, required if a new instance of `testrpc` was started:
+# deploy contracts and save metadata: *.deployed.json
+dapp deploy -i $compiled_contracts_dir -O $frontend_contracts_dir'/{{contract}}.deployed.json'
 
 # start: http server and file watcher (.js, .css)
 lxterminal -e npm start
