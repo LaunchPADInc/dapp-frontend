@@ -1,6 +1,6 @@
 {
   "name": "@warren-bank/dapp-frontend",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "dependencies": {
     "npm-add-script": "^1.1.0",
     "shelljs": "^0.7.7",
@@ -8,7 +8,8 @@
   },
   "bin": {
     "dapp-frontend": "bin/dapp-frontend.js",
-    "create-react-dapp": "bin/create-react-dapp.js"
+    "create-react-dapp": "bin/create-react-dapp.js",
+    "create-ng2-dapp": "bin/create-ng2-dapp.js"
   },
   "license": "GPL-2.0",
   "author": {

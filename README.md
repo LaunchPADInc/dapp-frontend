@@ -4,10 +4,14 @@
 
 Command-line tool to initialize a Dapp frontend with a complete development toolchain.
 
-Eventually, several toolchains will be available from which to select.
+Eventually, several toolchains will be available from which to select.<br>
 Currently, the following are implemented:
 * `react`
   * React + Sass + Webpack
+  * file watchers that trigger Webpack to rebundle .js and .css
+  * http server (localhost:3000)
+* `ng2`
+  * Angular 2 + Sass + Webpack
   * file watchers that trigger Webpack to rebundle .js and .css
   * http server (localhost:3000)
 
@@ -22,6 +26,8 @@ npm install -g @warren-bank/dapp-deploy
 # needed to initialize the `react` toolchain
 npm install -g create-react-app
 npm install -g node-sass
+
+# no additional global dependencies are needed to initialize the `ng2` toolchain
 ```
 
 #### Example:
@@ -87,6 +93,13 @@ lxterminal -e npm run watch-css
 xdg-open 'http://localhost:3000/'
 ```
 
+#### Notes (regarding the previous **Example**):
+
+* the example was intended to illustrate the general procedure to initialize a new project using the "React" toolchain
+* the procedure to initialize the "Angular 2" toolchain is nearly identical.
+  * in this case, however, the file watcher for SASS (.scss) stylesheets is started along with the other watchers (.js, .css) when `npm start` is run
+  * no separate command (ex: `npm run watch-css`) is needed to do so
+
 #### Usage:
 
 ```bash
@@ -96,6 +109,7 @@ dapp-frontend command <directory_path>
 
 Commands:
   react                                              initialize toolchain: 'React'
+  ng2                                                initialize toolchain: 'Angular 2'
 
 Options:
   --help                                             Show help [boolean]
@@ -119,17 +133,17 @@ license: GPLv2
 
 #### Dependencies:
 
-* As indicated in the `Install` instructions,<br>
-  a prerequisite is that some external tools need to be installed globally.
-* These are large (powerful) packages, where there's no need to download a duplicate copy.
-* The one exception is [`dapp-deploy`](https://github.com/warren-bank/dapp-deploy), which is a very small package that is intended to be used in combination with this tool. Strictly speaking, it can be omitted and the data structures it serves to produce (.deployed.json) can be written by hand.
+* As indicated in the **Install** instructions,<br>
+  some toolchains may require additional global dependencies
+* note: this may change..
 
 #### Executables:
 
 * When `dapp` is installed, this tool can be invoked by the command: `dapp frontend command <directory_path>`
 * When used standalone, it can be invoked by the command: `dapp-frontend command <directory_path>`
 * Additionally, each toolchain can be invoked directly:
-  * `react`:<br>`create-react-dapp <directory_path>`
+  * "React":<br>`create-react-dapp <directory_path>`
+  * "Angular 2":<br>`create-ng2-dapp <directory_path>`
 
 #### Legal:
 
