@@ -137,7 +137,7 @@ license: GPLv2
 
 * As indicated in the **Install** instructions,<br>
   some toolchains may require additional global dependencies
-* note: this may change..
+* note: this may change...
 
 #### Executables:
 
