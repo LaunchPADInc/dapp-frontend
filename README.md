@@ -22,8 +22,8 @@ Within each toolchain, the example Dapp is a rewrite of the [`MetaCoin` Dapp](ht
 #### Installation:
 
 ```bash
-npm install -g @warren-bank/dapp-frontend
-npm install -g @warren-bank/dapp-deploy
+npm install -g @launchpadinc/dapp-frontend
+npm install -g @launchpadinc/dapp-deploy
 
 # needed to initialize the `react` toolchain
 npm install -g create-react-app
@@ -122,8 +122,8 @@ Examples:
   dapp-frontend react                                toolchain: 'React'
                                                      directory path: '.'
 
-copyright: Warren Bank <github.com/warren-bank>
-license: GPLv2
+copyright: LaunchPAD Inc. <github.com/launchpadinc>
+license: 
 ```
 
 #### Notes:
@@ -131,7 +131,7 @@ license: GPLv2
 * This tool is intended to complement the `dapphub/dapp` toolchain, but it has no dependency on `dapp`.
 * It uses vanilla [`web3.js`](https://github.com/ethereum/web3.js/) to communicate with an Ethereum JSON-RPC server.
 * It uses [ABI](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) data (.abi.json) to generate [contract](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcontract) objects in javascript. This data is produced by the Solidity compiler (solc).
-* It uses the addresses of deployed contracts (.deployed.json) to associate contract objects with the usable instances that exist in the blockchain. This data is produced by [`dapp-deploy`](https://github.com/warren-bank/dapp-deploy).
+* It uses the addresses of deployed contracts (.deployed.json) to associate contract objects with the usable instances that exist in the blockchain. This data is produced by [`dapp-deploy`](https://github.com/launchpadinc/dapp-deploy).
 
 #### Dependencies:
 
