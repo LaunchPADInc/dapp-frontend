@@ -1,4 +1,6 @@
-### [dapp-frontend](https://github.com/warren-bank/dapp-frontend)
+## Description
+
+***Everything contained in this repository is in draft form and subject to change at any time and provided for information purposes only.  LaunchPAD does not guarantee the accuracy of the information contained in this repository and the information is provided “as is” with no representations or warranties, express or implied. This code is owned and copyrighted by LaunchPAD and cannot be used by anyone for any purpose.***
 
 #### Description:
 
@@ -144,8 +146,3 @@ license: GPLv2
 * Additionally, each toolchain can be invoked directly:
   * "React":<br>`create-react-dapp <directory_path>`
   * "Angular 2":<br>`create-ng2-dapp <directory_path>`
-
-#### Legal:
-
-* copyright: [Warren Bank](https://github.com/warren-bank)
-* license: [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)
