@@ -1,0 +1,30 @@
+{
+  "name": "@warren-bank/dapp-frontend",
+  "version": "1.1.0",
+  "dependencies": {
+    "npm-add-script": "^1.1.0",
+    "shelljs": "^0.7.7",
+    "yargs": "^8.0.1"
+  },
+  "bin": {
+    "dapp-frontend": "bin/dapp-frontend.js",
+    "create-react-dapp": "bin/create-react-dapp.js",
+    "create-ng2-dapp": "bin/create-ng2-dapp.js"
+  },
+  "license": "GPL-2.0",
+  "author": {
+    "name": "Warren R. Bank",
+    "email": "warren.r.bank@gmail.com",
+    "url": "https://github.com/warren-bank"
+  },
+  "homepage": "https://github.com/warren-bank/dapp-frontend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warren-bank/dapp-frontend"
+  },
+  "bugs": {
+    "url": "https://github.com/warren-bank/dapp-frontend/issues"
+  },
+  "description": "command-line tool to initialize a Dapp frontend with a complete development toolchain",
+  "keywords": ["web3.js","web3","ethereum","solidity","solc","geth","testrpc","dapp","dapple","dapphub","truffle","trufflesuite"]
+}

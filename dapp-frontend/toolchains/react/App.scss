@@ -1,0 +1,83 @@
+$logo_image_size : 164px;
+
+.App {
+
+  .App-header {
+    text-align: center;
+    background-color: #242C44;
+    padding: 20px 0;
+    color: white;
+    overflow: hidden;
+
+    .App-logo {
+      animation: App-logo-glide infinite 20s linear;
+      display: block;
+      width: $logo_image_size;
+      height: $logo_image_size;
+      background-color: rgba(255,255,255,0.05);
+    }
+  }
+
+  .App-intro {
+
+    label {
+    display: inline-block;
+    width: 100px;
+    }
+
+    input {
+    width: 500px;
+    padding: 5px;
+    font-size: 16px;
+    }
+
+    button {
+    font-size: 16px;
+    padding: 5px;
+    }
+
+    h1, h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    }
+
+    h2 {
+    color: #AAA;
+    font-size: 32px;
+    }
+
+    h3 {
+    font-weight: normal;
+    color: #AAA;
+    font-size: 24px;
+    }
+
+    .black {
+    color: black;
+    }
+
+    #balance {
+    color: black;
+    }
+
+    .hint {
+    color: #666;
+    }
+
+  }
+
+}
+
+/* animation: App-logo-spin infinite 20s linear; */
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* animation: App-logo-glide infinite 20s linear; */
+@keyframes App-logo-glide {
+  from { margin-left: -$logo_image_size; }
+  to { margin-left: 100%; }
+}

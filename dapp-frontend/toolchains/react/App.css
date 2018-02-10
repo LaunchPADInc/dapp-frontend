@@ -1,0 +1,64 @@
+.App .App-header {
+  text-align: center;
+  background-color: #242C44;
+  padding: 20px 0;
+  color: white;
+  overflow: hidden; }
+
+.App .App-header .App-logo {
+  animation: App-logo-glide infinite 20s linear;
+  display: block;
+  width: 164px;
+  height: 164px;
+  background-color: rgba(255, 255, 255, 0.05); }
+
+.App .App-intro label {
+  display: inline-block;
+  width: 100px; }
+
+.App .App-intro input {
+  width: 500px;
+  padding: 5px;
+  font-size: 16px; }
+
+.App .App-intro button {
+  font-size: 16px;
+  padding: 5px; }
+
+.App .App-intro h1, .App .App-intro h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px; }
+
+.App .App-intro h2 {
+  color: #AAA;
+  font-size: 32px; }
+
+.App .App-intro h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 24px; }
+
+.App .App-intro .black {
+  color: black; }
+
+.App .App-intro #balance {
+  color: black; }
+
+.App .App-intro .hint {
+  color: #666; }
+
+/* animation: App-logo-spin infinite 20s linear; */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+/* animation: App-logo-glide infinite 20s linear; */
+@keyframes App-logo-glide {
+  from {
+    margin-left: -164px; }
+  to {
+    margin-left: 100%; } }
